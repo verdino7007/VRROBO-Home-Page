@@ -995,6 +995,27 @@ document.addEventListener('DOMContentLoaded', () => {
             : `Minimal DP 20%: ${formatIDR(minDpAmount)}`;
         }
         
+        // Dynamic input label adjustment based on selected payment method
+        const payMethodSelect = document.getElementById('pay-method-select');
+        const paySenderLabel = document.getElementById('pay-sender-label');
+        const paySenderInput = document.getElementById('pay-sender-name');
+        
+        if (payMethodSelect && paySenderLabel && paySenderInput) {
+          payMethodSelect.addEventListener('change', (e) => {
+            const val = e.target.value;
+            if (val === 'BCA') {
+              paySenderLabel.textContent = currentLang === 'en' ? "Sender Account Name" : "Nama Pengirim Rekening";
+              paySenderInput.placeholder = "Contoh: Budi Santoso";
+            } else if (val === 'PayPal') {
+              paySenderLabel.textContent = currentLang === 'en' ? "Sender PayPal Email" : "Email PayPal Pengirim";
+              paySenderInput.placeholder = "Contoh: budi@email.com";
+            } else if (val === 'Crypto') {
+              paySenderLabel.textContent = currentLang === 'en' ? "Sender Wallet Address / Name" : "Alamat Wallet / Nama Pengirim";
+              paySenderInput.placeholder = "Contoh: 0x... atau Nama Pengirim";
+            }
+          });
+        }
+        
         // Event handler for submission
         if (kickoffForm) {
           const newKickoffForm = kickoffForm.cloneNode(true);
