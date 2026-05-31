@@ -1091,7 +1091,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const tgBtn = document.getElementById('share-tg');
       const emailBtn = document.getElementById('share-email');
 
-      if (waBtn) waBtn.href = `https://api.whatsapp.com/send?text=${textMsg}`;
+      if (waBtn) waBtn.href = `https://api.whatsapp.com/send?phone=6281211343828&text=${textMsg}`;
       if (tgBtn) tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(trackingLink)}&text=${encodeURIComponent(messages[currentLang])}`;
       if (emailBtn) {
         const emailSubject = encodeURIComponent(translations[currentLang]["agreement-title"] + " - " + ticket.id);
