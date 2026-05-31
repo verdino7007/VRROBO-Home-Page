@@ -110,7 +110,7 @@ const translations = {
     "admin-login-subtitle": "Masukkan sandi khusus PM untuk mengelola data proyek, harga, dan progress klien.",
     "admin-label-pass": "Sandi Khusus PM",
     "admin-btn-login": "Masuk ke Panel PM",
-    "admin-login-failed": "Sandi salah. Sandi bawaan adalah admin123",
+    "admin-login-failed": "Sandi salah. Silakan coba lagi.",
     "admin-list-title": "Daftar Tiket Proyek",
     "th-ticket": "ID Tiket",
     "th-client": "Klien",
@@ -305,7 +305,7 @@ const translations = {
     "admin-login-subtitle": "Enter the PM passcode to manage project data, pricing, and client progress.",
     "admin-label-pass": "PM Passcode",
     "admin-btn-login": "Access PM Panel",
-    "admin-login-failed": "Invalid passcode. Default passcode is admin123",
+    "admin-login-failed": "Invalid passcode. Please try again.",
     "admin-list-title": "Project Tickets List",
     "th-ticket": "Ticket ID",
     "th-client": "Client",
@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (emailInput) emailInput.placeholder = lang === 'en' ? 'name@email.com' : 'nama@email.com';
     if (descInput) descInput.placeholder = lang === 'en' ? 'Write additional notes here if any...' : 'Tulis catatan tambahan di sini jika ada...';
     if (trackerInput) trackerInput.placeholder = lang === 'en' ? 'Enter Ticket ID (e.g. VRB-2026-0001)...' : 'Masukkan ID Tiket Anda (cth: VRB-2026-0001)...';
-    if (adminPassInput) adminPassInput.placeholder = lang === 'en' ? 'Enter passcode (default: admin123)...' : 'Masukkan sandi (default: admin123)...';
+    if (adminPassInput) adminPassInput.placeholder = lang === 'en' ? 'Enter passcode...' : 'Masukkan sandi...';
 
     // Update active lang toggle classes
     if (lang === 'en') {
@@ -1031,7 +1031,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const passcode = document.getElementById('admin-passcode').value.trim();
 
-      if (passcode === 'admin123' || passcode === 'vrrobo2026') {
+      if (passcode === '312812Vho#7007') {
         // Successful login
         adminLoginBox.style.display = 'none';
         adminBoardView.style.display = 'block';
