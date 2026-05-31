@@ -1009,8 +1009,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (val === 'PayPal') {
               paySenderLabel.textContent = currentLang === 'en' ? "Sender PayPal Email" : "Email PayPal Pengirim";
               paySenderInput.placeholder = "Contoh: budi@email.com";
-            } else if (val === 'Crypto') {
-              paySenderLabel.textContent = currentLang === 'en' ? "Sender Wallet Address / Name" : "Alamat Wallet / Nama Pengirim";
+            } else if (val === 'USDT') {
+              paySenderLabel.textContent = currentLang === 'en' ? "Sender USDT Wallet Address / Name" : "Alamat Wallet USDT / Nama Pengirim";
               paySenderInput.placeholder = "Contoh: 0x... atau Nama Pengirim";
             }
           });
