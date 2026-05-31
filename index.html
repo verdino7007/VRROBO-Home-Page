@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRROBO2025 - Jasa Pembuatan Aplikasi Web & Android Premium</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="VRROBO2025 menyediakan jasa pembuatan aplikasi berbasis Web (Web-based App) dan Aplikasi Android berkualitas tinggi, aman, responsif, dan berkinerja tinggi. Hubungi vrrobo2025@gmail.com.">
+  <meta name="keywords" content="pembuatan aplikasi web, pembuatan aplikasi android, developer android, developer web, vrrobo2025, landing page, jasa bikin aplikasi, flutter, react, kotlin">
+  <meta name="author" content="VRROBO2025">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VRROBO2025 - Jasa Pembuatan Aplikasi Web & Android Premium">
+  <meta property="og:description" content="Kembangkan bisnis Anda dengan aplikasi Web-based dan Android modern dari VRROBO2025. Performa andal, UI/UX eksklusif.">
+  <meta property="og:image" content="https://vrrobo.com/logo.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="VRROBO2025 - Jasa Pembuatan Aplikasi Web & Android Premium">
+  <meta property="twitter:description" content="Kembangkan bisnis Anda dengan aplikasi Web-based dan Android modern dari VRROBO2025. Performa andal, UI/UX eksklusif.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- QR Code Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+
+  <!-- Header Section -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="brand-logo">
+        <img src="logo.png" alt="VRROBO2025 Logo" class="logo-img">
+        VRROBO2025
+      </a>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#" class="nav-link active" id="nav-link-home" data-i18n="nav-home">Home</a></li>
+        <li><a href="#services" class="nav-link" id="nav-link-services" data-i18n="nav-services">Layanan</a></li>
+        <li><a href="#tech" class="nav-link" id="nav-link-tech" data-i18n="nav-tech">Teknologi</a></li>
+        <li><a href="#why" class="nav-link" id="nav-link-why" data-i18n="nav-why">Mengapa Kami</a></li>
+        <li><a href="#tracker-section" class="nav-link" id="nav-link-tracker" data-i18n="nav-tracker">Lacak Proyek</a></li>
+        <li><a href="#admin-section" class="nav-link" id="nav-link-admin" data-i18n="nav-admin">Dashboard PM</a></li>
+        
+        <!-- Language Switcher Toggle -->
+        <li class="lang-switcher-container">
+          <button class="lang-btn active" id="btn-lang-id">ID</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btn-lang-en">EN</button>
+        </li>
+        
+        <li><a href="#contact" class="btn-contact" id="nav-btn-contact" data-i18n="nav-contact">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-pulse"></span>
+          <span data-i18n="hero-badge">Buka untuk Kolaborasi 2026</span>
+        </div>
+        <h1 class="hero-title" id="main-headline">
+          Mengubah Ide Anda Menjadi Aplikasi <span class="gradient-text">Web Based</span> & <span class="gradient-text-alt">Android</span> Kelas Dunia
+        </h1>
+        <p class="hero-desc" data-i18n="hero-desc">
+          VRROBO2025 menghadirkan layanan pengembangan software kustom berkualitas tinggi dengan performa tangguh, keamanan tingkat lanjut, dan desain UI/UX modern yang memikat pengguna Anda.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" id="hero-cta-primary" data-i18n="hero-cta-primary">
+            Konsultasi Gratis
+          </a>
+          <a href="#services" class="btn-secondary" id="hero-cta-secondary" data-i18n="hero-cta-secondary">Lihat Layanan</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-container">
+          <div class="sphere-glow"></div>
+          <img src="logo.png" alt="VRROBO2025 Tech" class="hero-logo-img">
+          <div class="tech-orbits"></div>
+          
+          <!-- Visual Glass Card 1 -->
+          <div class="visual-card">
+            <div class="card-header-visual">
+              <div class="icon-box-sm">WEB</div>
+              <div class="card-title-visual">Web App System</div>
+            </div>
+            <div class="card-content-visual" data-i18n="hero-card1-content">
+              Responsiveness: 100%<br>
+              Speed Performance: Ultra Fast
+            </div>
+            <div class="bar-graph">
+              <div class="bar-fill"></div>
+            </div>
+          </div>
+
+          <!-- Visual Glass Card 2 -->
+          <div class="visual-card-2">
+            <div class="card-header-visual">
+              <div class="icon-box-sm alt">AND</div>
+              <div class="card-title-visual">Android App</div>
+            </div>
+            <div class="card-content-visual" data-i18n="hero-card2-content">
+              Native & Cross-Platform<br>
+              Reliability: Stable
+            </div>
+            <div class="bar-graph">
+              <div class="bar-fill alt"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="section-title-wrapper reveal">
+        <span class="section-subtitle" data-i18n="services-subtitle">Layanan Kami</span>
+        <h2 class="section-title" data-i18n="services-title">Solusi Digital yang Kami Tawarkan</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Web App -->
+        <div class="service-card reveal">
+          <div class="icon-box-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3 class="service-title" data-i18n="services-web-title">Web-Based Application</h3>
+          <p class="service-desc" data-i18n="services-web-desc">
+            Pengembangan sistem aplikasi berbasis web yang kuat, responsif, dan dapat diakses dari perangkat apa pun tanpa instalasi. Sempurna untuk skalabilitas bisnis Anda.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="services-web-feat1">Sistem Informasi & Dashboard Kustom</li>
+            <li data-i18n="services-web-feat2">E-Commerce & Integrasi Payment Gateway</li>
+            <li data-i18n="services-web-feat3">Progressive Web Apps (PWA)</li>
+            <li data-i18n="services-web-feat4">Integrasi RESTful API & Keamanan SQL/XSS</li>
+          </ul>
+        </div>
+
+        <!-- Service 2: Android App -->
+        <div class="service-card alt reveal">
+          <div class="icon-box-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          </div>
+          <h3 class="service-title" data-i18n="services-android-title">Android Application</h3>
+          <p class="service-desc" data-i18n="services-android-desc">
+            Pembuatan aplikasi Android modern, responsif, dan interaktif dengan pemanfaatan hardware perangkat secara optimal untuk memberikan pengalaman pengguna terbaik.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="services-android-feat1">Android Native & Cross-Platform (Flutter)</li>
+            <li data-i18n="services-android-feat2">UI/UX Modern dengan Dark Mode Bawaan</li>
+            <li data-i18n="services-android-feat3">Integrasi Fitur HP (Kamera, GPS, Notifikasi)</li>
+            <li data-i18n="services-android-feat4">Dukungan Rilis ke Google Play Store</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="section-padding" id="tech">
+    <div class="container">
+      <div class="tech-stack-container reveal">
+        <span class="section-subtitle" data-i18n="tech-subtitle">Teknologi Kami</span>
+        <h2 class="section-title" data-i18n="tech-title">Teknologi Modern untuk Performa Maksimal</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;" data-i18n="tech-desc">
+          Kami menggunakan teknologi terdepan dan teruji di industri untuk memastikan aplikasi Anda cepat, aman, dan mudah dikembangkan di masa depan.
+        </p>
+
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">⚛️</div>
+            <span class="tech-name">React / NextJS</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📱</div>
+            <span class="tech-name">Flutter</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🟢</div>
+            <span class="tech-name">Node JS</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔥</div>
+            <span class="tech-name">Firebase</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🐘</div>
+            <span class="tech-name">PostgreSQL</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🛡️</div>
+            <span class="tech-name">Kotlin / Native</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🎨</div>
+            <span class="tech-name">Tailwind CSS</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🐙</div>
+            <span class="tech-name">Git / DevOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section-padding" id="why">
+    <div class="container">
+      <div class="section-title-wrapper reveal">
+        <span class="section-subtitle" data-i18n="why-subtitle">Kelebihan VRROBO2025</span>
+        <h2 class="section-title" data-i18n="why-title">Mengapa Mempercayakan Aplikasi Anda kepada Kami?</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="stats-grid reveal">
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label" data-i18n="why-stat1">Kepuasan Klien</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">5x</div>
+            <div class="stat-label" data-i18n="why-stat2">Lebih Cepat & Optimal</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label" data-i18n="why-stat3">Dukungan Teknis</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">2026</div>
+            <div class="stat-label" data-i18n="why-stat4">Standar Tech Terkini</div>
+          </div>
+        </div>
+
+        <div class="why-features reveal">
+          <div class="why-card">
+            <div class="why-icon">💡</div>
+            <div>
+              <h3 class="why-card-title" data-i18n="why-feat1-title">Desain UI/UX Eksklusif & Modern</h3>
+              <p class="why-card-desc" data-i18n="why-feat1-desc">Setiap aplikasi dirancang secara kustom, bukan menggunakan template pasaran, agar brand Anda tampil menonjol.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🔒</div>
+            <div>
+              <h3 class="why-card-title" data-i18n="why-feat2-title">Fokus Keamanan & Performa Tinggi</h3>
+              <p class="why-card-desc" data-i18n="why-feat2-desc">Optimasi struktur database, caching, dan perlindungan dari kerentanan umum di web dan android.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🛠️</div>
+            <div>
+              <h3 class="why-card-title" data-i18n="why-feat3-title">Kode Bersih & Skalabel</h3>
+              <p class="why-card-desc" data-i18n="why-feat3-desc">Menggunakan arsitektur software yang bersih sehingga aplikasi mudah dikembangkan dengan fitur-fitur baru di masa depan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Tracker Section (Client Dashboard) -->
+  <section class="section-padding" id="tracker-section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <div class="container">
+      <div class="section-title-wrapper reveal">
+        <span class="section-subtitle" data-i18n="tracker-subtitle">Pelacakan Real-time</span>
+        <h2 class="section-title" data-i18n="tracker-title">Lacak Status & Progress Proyek Anda</h2>
+      </div>
+
+      <div class="tracker-container reveal">
+        <!-- Search Input -->
+        <div class="tracker-search-box">
+          <input type="text" id="tracker-input" class="form-input" placeholder="Masukkan ID Tiket Anda (cth: VRB-2026-0001)...">
+          <button type="button" id="tracker-search-btn" class="btn-primary" data-i18n="tracker-btn-search">Lacak Proyek</button>
+        </div>
+
+        <!-- Ticket Info & Tracker Display (Hidden by default) -->
+        <div id="tracker-result-card" class="tracker-result-card" style="display: none;">
+          <!-- Special Dropped Project Alert -->
+          <div id="tracker-dropped-notice" class="tracker-dropped-notice" style="display: none;">
+            <div class="notice-icon">⚠</div>
+            <div>
+              <h4 data-i18n="notice-dropped-title">PROYEK DIBATALKAN (DROPPED)</h4>
+              <p><span data-i18n="notice-dropped-desc">Proyek ini dibatalkan oleh PM VRROBO dengan alasan:</span> <strong id="display-drop-reason">-</strong></p>
+            </div>
+          </div>
+
+          <div class="tracker-header">
+            <div>
+              <h3 class="tracker-ticket-id" id="display-ticket-id">VRB-2026-0001</h3>
+              <p class="tracker-client-name" id="display-client-name">Nama Klien</p>
+            </div>
+            <div class="tracker-status-badge" id="display-status-badge" data-i18n="status-review">Menunggu Review</div>
+          </div>
+
+          <!-- Price & Timeline Summary Card -->
+          <div class="tracker-pricing-summary">
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="summary-label-platform">Platform</span>
+              <span class="summary-value" id="display-platform">Web Application</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="summary-label-cost">Estimasi Anggaran</span>
+              <div class="summary-value-wrapper">
+                <!-- Strikethrough pricing structure if discount applied -->
+                <span class="original-price-strike" id="display-original-cost" style="display: none;">Rp 0</span>
+                <span class="summary-value gradient-text" id="display-cost">Rp 12.000.000 - Rp 15.000.000</span>
+              </div>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="summary-label-time">Waktu Kerja</span>
+              <span class="summary-value" id="display-time">6 Minggu</span>
+            </div>
+          </div>
+
+          <!-- Step Progress Visualizer -->
+          <div class="progress-steps-wrapper" id="progress-steps-wrapper">
+            <div class="progress-line-bg">
+              <div class="progress-line-fill" id="progress-line-fill"></div>
+            </div>
+            
+            <div class="step-item active" id="step-1">
+              <div class="step-num">1</div>
+              <div class="step-title" data-i18n="step1-title">Inisiasi Proyek</div>
+              <div class="step-desc" data-i18n="step1-desc">Pemesanan & Deskripsi Proyek Diterima.</div>
+            </div>
+
+            <div class="step-item" id="step-2">
+              <div class="step-num">2</div>
+              <div class="step-title" data-i18n="step2-title">Persetujuan & KPI</div>
+              <div class="step-desc" data-i18n="step2-desc">Kesepakatan KPI & Draft Kontrak VRROBO.</div>
+            </div>
+
+            <div class="step-item" id="step-3">
+              <div class="step-num">3</div>
+              <div class="step-title" data-i18n="step3-title">Pengembangan</div>
+              <div class="step-desc" data-i18n="step3-desc">Proses Pembuatan Kode & Desain UI/UX.</div>
+            </div>
+
+            <div class="step-item" id="step-4">
+              <div class="step-num">4</div>
+              <div class="step-title" data-i18n="step4-title">Pengujian (QA)</div>
+              <div class="step-desc" data-i18n="step4-desc">Pengujian Sistem, Bugs Fix & Keamanan.</div>
+            </div>
+
+            <div class="step-item" id="step-5">
+              <div class="step-num">5</div>
+              <div class="step-title" data-i18n="step5-title">Rilis & Delivery</div>
+              <div class="step-desc" data-i18n="step5-desc">Serah Terima & Rilis ke Produksi/Store.</div>
+            </div>
+          </div>
+
+          <!-- Project Agreement & KPI Drawer -->
+          <div id="tracker-agreement-box" class="tracker-agreement-box">
+            <h4 class="agreement-box-title" data-i18n="agreement-title">Draf Persetujuan Proyek & KPI VRROBO2025</h4>
+            <p class="agreement-box-info" data-i18n="agreement-info">Berikut adalah draf kerja resmi sebagai acuan target KPI proyek Anda. Mohon setujui draf ini untuk memulai proses pengembangan.</p>
+            
+            <div class="agreement-content">
+              <div class="agreement-row"><strong>Platform:</strong> <span id="agree-platform">-</span></div>
+              <div class="agreement-row"><strong>Estimasi Biaya:</strong> <span id="agree-cost">-</span></div>
+              <div class="agreement-row"><strong>Waktu Pengerjaan:</strong> <span id="agree-time">-</span></div>
+              <div class="agreement-row"><strong>Target Kinerja Utama (KPI Proyek):</strong></div>
+              <ul class="agreement-kpis">
+                <li data-i18n="kpi-speed">Page Load Time kurang dari 2.5 Detik (Optimasi Aset & Caching).</li>
+                <li data-i18n="kpi-responsive">100% Responsif di perangkat Mobile, Tablet, dan Desktop.</li>
+                <li data-i18n="kpi-bugs">Bebas dari Crash Utama (Critical Bug-Free) pada saat rilis produksi.</li>
+                <li data-i18n="kpi-security">Keamanan Teruji (Enkripsi database password, proteksi SQL Injection & XSS).</li>
+                <li data-i18n="kpi-qa">Melalui 2 Tahap Pengujian QA (Alpha & Beta Testing) oleh Tim VRROBO.</li>
+              </ul>
+              
+              <div class="signatures-area">
+                <div class="signature-box">
+                  <div class="sig-title" data-i18n="sig-pm">Project Manager VRROBO</div>
+                  <div class="sig-line approved">VRROBO PM SYSTEM (Verified)</div>
+                </div>
+                <div class="signature-box">
+                  <div class="sig-title" data-i18n="sig-client">Pihak Klien (Anda)</div>
+                  <div class="sig-line" id="client-signature-line" data-i18n="sig-pending">Menunggu Persetujuan</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Approve Actions -->
+            <div class="agreement-actions" id="agreement-actions-area">
+              <button type="button" id="btn-approve-project" class="btn-primary" data-i18n="btn-approve-project">Setujui Proyek & Tanda Tangan Kontrak</button>
+            </div>
+
+            <!-- Share Actions (WhatsApp, Telegram, Email) -->
+            <div class="share-actions-wrapper">
+              <h5 data-i18n="share-title">Bagikan Persetujuan Kontrak ke PM / Klien:</h5>
+              <div class="share-buttons-grid">
+                <a href="#" id="share-wa" target="_blank" class="share-btn wa">WhatsApp</a>
+                <a href="#" id="share-tg" target="_blank" class="share-btn tg">Telegram</a>
+                <a href="#" id="share-email" class="share-btn email">Email</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project History Logs Timeline -->
+          <div class="project-history-timeline-box">
+            <h4 data-i18n="history-box-title">Riwayat Aktivitas & Log Proyek</h4>
+            <div class="timeline-logs-list" id="client-logs-list">
+              <!-- Dynamically populated activity logs -->
+            </div>
+          </div>
+
+        </div>
+
+        <div id="tracker-error-msg" class="tracker-error-msg" style="display: none;" data-i18n="tracker-error">Tiket tidak ditemukan. Pastikan ID Tiket yang dimasukkan benar.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PM / Developer Dashboard Section -->
+  <section class="section-padding" id="admin-section">
+    <div class="container">
+      <div class="section-title-wrapper reveal">
+        <span class="section-subtitle">Developer Dashboard</span>
+        <h2 class="section-title">VRROBO Project Manager Panel</h2>
+      </div>
+
+      <div class="admin-panel-container reveal">
+        <!-- 1. Admin Login View (Default) -->
+        <div id="admin-login-box" class="admin-login-box">
+          <div class="login-header">
+            <span class="lock-icon">🔒</span>
+            <h3 data-i18n="admin-login-title">Akses Khusus Project Manager VRROBO</h3>
+            <p data-i18n="admin-login-subtitle">Masukkan sandi khusus PM untuk mengelola data proyek, harga, dan progress klien.</p>
+          </div>
+          <form id="admin-login-form">
+            <div class="form-group">
+              <label for="admin-passcode" class="form-label" data-i18n="admin-label-pass">Sandi Khusus PM</label>
+              <input type="password" id="admin-passcode" class="form-input" placeholder="Masukkan sandi (default: admin123)..." required>
+            </div>
+            <button type="submit" class="form-submit-btn" data-i18n="admin-btn-login">Masuk ke Panel PM</button>
+            <div id="admin-login-error" class="form-status error" style="display: none;" data-i18n="admin-login-failed">Sandi salah. Coba gunakan: admin123</div>
+          </form>
+        </div>
+
+        <!-- 2. Admin Dashboard Board (Hidden until verified) -->
+        <div id="admin-board-view" class="admin-board-view" style="display: none;">
+          
+          <div class="admin-grid-layout">
+            
+            <!-- Left Column: Tickets List Sidebar -->
+            <div class="admin-tickets-sidebar">
+              <div class="sidebar-header">
+                <h4 data-i18n="admin-list-title">Daftar Tiket Proyek</h4>
+                <button type="button" id="btn-admin-logout" class="btn-logout">Logout</button>
+              </div>
+              <div class="admin-project-table-wrapper">
+                <table class="admin-project-table">
+                  <thead>
+                    <tr>
+                      <th data-i18n="th-ticket">ID Tiket</th>
+                      <th data-i18n="th-client">Klien</th>
+                      <th data-i18n="th-status">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-tickets-tbody">
+                    <!-- Project entries populated here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Column: Selected Ticket Control Center -->
+            <div class="admin-ticket-control-center">
+              <!-- Placeholder when no ticket selected -->
+              <div id="admin-placeholder" class="admin-placeholder-msg">
+                <span class="select-hint-icon">⚙</span>
+                <p data-i18n="admin-placeholder">Pilih salah satu tiket di daftar sebelah kiri untuk memodifikasi progress, diskon, atau membatalkan proyek.</p>
+              </div>
+
+              <!-- Control panel content -->
+              <div id="admin-details-card" class="admin-details-card" style="display: none;">
+                <div class="control-card-header">
+                  <div>
+                    <h3 id="admin-selected-ticket-id">VRB-2026-0001</h3>
+                    <p id="admin-selected-client-name">Klien: John Doe (john@example.com)</p>
+                  </div>
+                  <span class="tracker-status-badge" id="admin-selected-status-badge">Review Requirements</span>
+                </div>
+
+                <!-- Scope details display -->
+                <div class="control-row-detail">
+                  <div><strong>Platform:</strong> <span id="admin-detail-platform">-</span></div>
+                  <div><strong>Waktu Kerja:</strong> <span id="admin-detail-time">-</span></div>
+                  <div><strong>Fitur Terpilih:</strong> <span id="admin-detail-features">-</span></div>
+                </div>
+
+                <hr class="receipt-divider">
+
+                <!-- 1. Modification: Discount Slider -->
+                <div class="control-section-box">
+                  <h4 class="control-title" data-i18n="pm-ctrl-disc">Berikan Diskon Harga oleh PM</h4>
+                  <div class="discount-range-wrapper">
+                    <input type="range" id="admin-discount-range" min="0" max="30" step="5" value="0" class="admin-range-slider">
+                    <div class="discount-labels">
+                      <span>0%</span>
+                      <span>5%</span>
+                      <span>10%</span>
+                      <span>15%</span>
+                      <span>20%</span>
+                      <span>25%</span>
+                      <span>30%</span>
+                    </div>
+                    <div class="discount-value-display">
+                      <span data-i18n="applied-disc">Diskon Terpasang:</span> <strong id="admin-discount-value" class="gradient-text">0%</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Modification: Status Advancer -->
+                <div class="control-section-box">
+                  <h4 class="control-title" data-i18n="pm-ctrl-status">Ubah Status Proyek (Step Status)</h4>
+                  <div class="status-buttons-grid">
+                    <button type="button" class="btn-status-set" data-status="1" data-i18n="btn-set-init">Inisiasi</button>
+                    <button type="button" class="btn-status-set" data-status="2" data-i18n="btn-set-agree">Persetujuan</button>
+                    <button type="button" class="btn-status-set" data-status="3" data-i18n="btn-set-dev">Develop</button>
+                    <button type="button" class="btn-status-set" data-status="4" data-i18n="btn-set-qa">QA Test</button>
+                    <button type="button" class="btn-status-set" data-status="5" data-i18n="btn-set-launch">Rilis</button>
+                  </div>
+                </div>
+
+                <!-- 3. Modification: Drop or Revive Project -->
+                <div class="control-section-box red-border" id="admin-drop-box">
+                  <h4 class="control-title" data-i18n="pm-ctrl-drop">Batalkan Proyek (Drop Project)</h4>
+                  <div class="form-group" style="margin-bottom:15px;">
+                    <label for="admin-drop-reason" class="form-label" data-i18n="label-drop-reason">Alasan Pembatalan (Wajib)</label>
+                    <input type="text" id="admin-drop-reason" class="form-input" placeholder="Contoh: Klien melebihi batas anggaran / Fitur tidak layak...">
+                  </div>
+                  <button type="button" id="btn-admin-drop-project" class="btn-danger-action" data-i18n="btn-drop">Batalkan & Hentikan Proyek (Drop)</button>
+                </div>
+
+                <!-- Shown if project is currently dropped -->
+                <div class="control-section-box green-border" id="admin-revive-box" style="display: none;">
+                  <h4 class="control-title" data-i18n="pm-ctrl-revive">Pulihkan Kembali Proyek (Revive)</h4>
+                  <p class="control-desc-hint" data-i18n="revive-hint">Proyek ini dibatalkan sebelumnya. Klik tombol di bawah untuk memulihkan proyek ini ke status pengerjaan terakhir.</p>
+                  <button type="button" id="btn-admin-revive-project" class="btn-primary-action" data-i18n="btn-revive">Pulihkan Proyek Sekarang (Revive)</button>
+                </div>
+
+                <!-- Logs Display -->
+                <div class="control-section-box">
+                  <h4 class="control-title" data-i18n="pm-ctrl-logs">Catatan Log Riwayat Proyek</h4>
+                  <div class="admin-logs-box-list" id="admin-selected-logs-list">
+                    <!-- Populated here -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-subtitle" style="text-align: left;" data-i18n="contact-subtitle">Hubungi Kami</span>
+          <h2 class="contact-heading" data-i18n="contact-title">Siap Memulai Proyek Anda?</h2>
+          <p class="contact-text" data-i18n="contact-desc">
+            Tentukan kebutuhan aplikasi Anda menggunakan opsi formulir interaktif di samping. Kami akan menganalisis kebutuhan Anda dan segera mengirimkan proposal penawaran.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label" data-i18n="contact-label-email">Email Respon Cepat</div>
+                <a href="mailto:vrrobo2025@gmail.com" class="contact-detail-value" id="contact-email">vrrobo2025@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">🌍</div>
+              <div>
+                <div class="contact-detail-label" data-i18n="contact-label-loc">Lokasi Operasional</div>
+                <div class="contact-detail-value" data-i18n="contact-val-loc">Indonesia (Online & Remote Seluruh Dunia)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Choice-based Project Scoping Form -->
+        <div class="contact-form-container reveal">
+          <form name="contact-vrrobo2025" method="POST" data-netlify="true" id="contact-form">
+            <!-- Hidden input for Netlify forms -->
+            <input type="hidden" name="form-name" value="contact-vrrobo2025" />
+            
+            <!-- Basic Info -->
+            <div class="form-group">
+              <label for="form-name-input" class="form-label" data-i18n="form-label-name">Nama Lengkap / Instansi</label>
+              <input type="text" name="client_name" id="form-name-input" class="form-input" placeholder="Masukkan nama Anda..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email-input" class="form-label" data-i18n="form-label-email">Alamat Email Kontak</label>
+              <input type="email" name="client_email" id="form-email-input" class="form-input" placeholder="nama@email.com" required>
+            </div>
+
+            <!-- Choice Grid: App Type & Scale -->
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-service-select" class="form-label" data-i18n="form-label-platform">Tipe Platform Aplikasi</label>
+                <select name="app_platform" id="form-service-select" class="form-select" required>
+                  <option value="" disabled selected data-i18n="form-opt-platform">Pilih Platform...</option>
+                  <option value="web" data-i18n="form-opt-web">Web-Based Application</option>
+                  <option value="android" data-i18n="form-opt-android">Android Mobile Application</option>
+                  <option value="both" data-i18n="form-opt-both">Keduanya (Web & Android)</option>
+                  <option value="consultation" data-i18n="form-opt-consult">Konsultasi Sistem / Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-budget-select" class="form-label" data-i18n="form-label-budget">Skala / Estimasi Anggaran</label>
+                <select name="project_budget" id="form-budget-select" class="form-select" required>
+                  <option value="" disabled selected data-i18n="form-opt-budget">Pilih Anggaran...</option>
+                  <option value="economic" data-i18n="form-opt-budget-econ">Ekonomis / MVP Proyek</option>
+                  <option value="professional" data-i18n="form-opt-budget-prof">Menengah / Standar Bisnis</option>
+                  <option value="enterprise" data-i18n="form-opt-budget-ent">Skala Besar / Kustom Kompleks</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Choice Grid: Timeline -->
+            <div class="form-group">
+              <label for="form-timeline-select" class="form-label" data-i18n="form-label-timeline">Estimasi Target Waktu (Timeline)</label>
+              <select name="project_timeline" id="form-timeline-select" class="form-select" required>
+                <option value="" disabled selected data-i18n="form-opt-timeline">Pilih Target Waktu...</option>
+                <option value="fast" data-i18n="form-opt-time-fast">Cepat (&lt; 1 Bulan)</option>
+                <option value="normal" data-i18n="form-opt-time-norm">Standar (1 - 3 Bulan)</option>
+                <option value="extended" data-i18n="form-opt-time-ext">Bertahap (&gt; 3 Bulan)</option>
+              </select>
+            </div>
+
+            <!-- Multiselect Choice Chips: Features -->
+            <div class="form-group">
+              <label class="form-label" data-i18n="form-label-features">Fitur Utama yang Dibutuhkan (Pilih Sesuai Kebutuhan)</label>
+              <div class="choices-chip-grid">
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="auth">
+                  <span class="chip-text" data-i18n="feat-auth">Sistem Login / Akun</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="payment">
+                  <span class="chip-text" data-i18n="feat-payment">Pembayaran Online</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="maps">
+                  <span class="chip-text" data-i18n="feat-maps">Peta & GPS Lokasi</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="notifications">
+                  <span class="chip-text" data-i18n="feat-notif">Notifikasi Real-time</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="admin">
+                  <span class="chip-text" data-i18n="feat-admin">Dashboard Admin</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="features[]" value="chat">
+                  <span class="chip-text" data-i18n="feat-chat">Integrasi Chat/WhatsApp</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Multiselect Choice Chips: Technical Constraints -->
+            <div class="form-group">
+              <label class="form-label" data-i18n="form-label-constraints">Batasan Teknis Khusus (Jika Ada)</label>
+              <div class="choices-chip-grid">
+                <label class="chip-container">
+                  <input type="checkbox" name="constraints[]" value="offline">
+                  <span class="chip-text" data-i18n="const-offline">Dapat Diakses Offline</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="constraints[]" value="multiplatform">
+                  <span class="chip-text" data-i18n="const-multi">Wajib Android & iOS</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="constraints[]" value="security">
+                  <span class="chip-text" data-i18n="const-security">Kepatuhan Keamanan Tinggi</span>
+                </label>
+                <label class="chip-container">
+                  <input type="checkbox" name="constraints[]" value="legacy">
+                  <span class="chip-text" data-i18n="const-legacy">Integrasi Database Lama</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Text area for additional descriptions (optional) -->
+            <div class="form-group">
+              <label for="form-message-input" class="form-label" data-i18n="form-label-desc">Deskripsi Tambahan Ide Proyek (Opsional)</label>
+              <textarea name="additional_message" id="form-message-input" class="form-textarea" placeholder="Tulis catatan tambahan di sini jika ada..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="form-submit-btn" data-i18n="form-btn-submit">Kirim Pesan Konsultasi</button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Success Screen for Ticket Generation -->
+  <div id="ticket-modal" class="ticket-modal">
+    <div class="modal-content">
+      <button type="button" class="close-modal" id="close-modal-btn">&times;</button>
+      
+      <div class="modal-header-visual">
+        <span class="success-icon">🤖</span>
+        <h3 data-i18n="modal-title">Scoping Proyek Berhasil!</h3>
+        <p data-i18n="modal-subtitle">Terima kasih atas kepercayaan Anda kepada VRROBO2025. Berikut adalah detail draf proyek Anda:</p>
+      </div>
+
+      <!-- Ticket Receipt Card -->
+      <div class="ticket-receipt">
+        <div class="receipt-header">
+          <div>
+            <span class="ticket-badge-title">TICKET ID</span>
+            <h4 class="receipt-ticket-id" id="modal-ticket-id">VRB-2026-0001</h4>
+          </div>
+          <div class="qr-canvas-wrapper">
+            <canvas id="modal-qr-canvas"></canvas>
+          </div>
+        </div>
+
+        <div class="receipt-body">
+          <div class="receipt-row">
+            <span class="receipt-label" data-i18n="receipt-label-name">Klien</span>
+            <span class="receipt-val" id="modal-client-name">-</span>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label" data-i18n="receipt-label-platform">Tipe Platform</span>
+            <span class="receipt-val" id="modal-platform">-</span>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label" data-i18n="receipt-label-time">Estimasi Timeline</span>
+            <span class="receipt-val" id="modal-timeline">-</span>
+          </div>
+          
+          <hr class="receipt-divider">
+          
+          <div class="price-breakdown">
+            <h5 data-i18n="price-breakdown-title">Rincian Estimasi Biaya (AI Assisted):</h5>
+            <div class="price-row">
+              <span data-i18n="breakdown-dev">Biaya Pengembangan Base</span>
+              <span id="breakdown-val-base">Rp 0</span>
+            </div>
+            <div class="price-row">
+              <span data-i18n="breakdown-feat">Fitur Tambahan</span>
+              <span id="breakdown-val-features">Rp 0</span>
+            </div>
+            <div class="price-row">
+              <span data-i18n="breakdown-qa">Proses QA & Pengujian (15%)</span>
+              <span id="breakdown-val-qa">Rp 0</span>
+            </div>
+            <div class="price-row">
+              <span data-i18n="breakdown-inc">Biaya Timbul (Hosting/Play Store)</span>
+              <span id="breakdown-val-incidental">Rp 0</span>
+            </div>
+            <div class="price-row total-row">
+              <strong data-i18n="breakdown-total">Estimasi Total Proyek</strong>
+              <strong id="breakdown-val-total" class="gradient-text">Rp 0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="receipt-footer">
+          <p data-i18n="receipt-footer-text">Gunakan QR Code di atas atau simpan Tiket ID untuk melacak progres proyek Anda kapan saja pada bagian tracker kami.</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons inside Modal -->
+      <div class="modal-actions">
+        <button type="button" id="modal-btn-track" class="btn-primary" data-i18n="modal-btn-track">Lihat Kontrak & Progress Proyek</button>
+        <button type="button" id="modal-btn-close" class="btn-secondary" data-i18n="modal-btn-close">Tutup</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="#" class="footer-logo" id="footer-logo">
+        <img src="logo.png" alt="VRROBO2025" class="logo-img-sm">
+        VRROBO2025
+      </a>
+      <p>&copy; 2026 VRROBO2025. Hak Cipta Dilindungi Undang-Undang. | Developer Specialist</p>
+      <ul class="footer-nav">
+        <li><a href="#services" class="footer-nav-link" data-i18n="footer-link-services">Layanan</a></li>
+        <li><a href="#tech" class="footer-nav-link" data-i18n="footer-link-tech">Teknologi</a></li>
+        <li><a href="#contact" class="footer-nav-link" data-i18n="footer-link-contact">Kontak</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Link Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
