@@ -355,20 +355,44 @@
 
             <div class="step-item" id="step-3">
               <div class="step-num">3</div>
-              <div class="step-title" data-i18n="step3-title">Pengembangan</div>
-              <div class="step-desc" data-i18n="step3-desc">Proses Pembuatan Kode & Desain UI/UX.</div>
+              <div class="step-title" data-i18n="step3-title">Kickoff & Pembayaran</div>
+              <div class="step-desc" data-i18n="step3-desc">Pembayaran DP & Aktivasi Proyek.</div>
             </div>
 
             <div class="step-item" id="step-4">
               <div class="step-num">4</div>
-              <div class="step-title" data-i18n="step4-title">Pengujian (QA)</div>
-              <div class="step-desc" data-i18n="step4-desc">Pengujian Sistem, Bugs Fix & Keamanan.</div>
+              <div class="step-title" data-i18n="step4-title">Pengembangan</div>
+              <div class="step-desc" data-i18n="step4-desc">Proses Pembuatan Kode & Desain UI/UX.</div>
             </div>
 
             <div class="step-item" id="step-5">
               <div class="step-num">5</div>
-              <div class="step-title" data-i18n="step5-title">Rilis & Delivery</div>
-              <div class="step-desc" data-i18n="step5-desc">Serah Terima & Rilis ke Produksi/Store.</div>
+              <div class="step-title" data-i18n="step5-title">Pengujian (QA)</div>
+              <div class="step-desc" data-i18n="step5-desc">Pengujian Sistem, Bugs Fix & Keamanan.</div>
+            </div>
+
+            <div class="step-item" id="step-6">
+              <div class="step-num">6</div>
+              <div class="step-title" data-i18n="step6-title">Rilis & Delivery</div>
+              <div class="step-desc" data-i18n="step6-desc">Serah Terima & Rilis ke Produksi/Store.</div>
+            </div>
+          </div>
+
+          <!-- Notification Dispatch Log Banner (Hidden by default, shows up when payment confirmed) -->
+          <div id="tracker-notification-dispatch" class="tracker-notification-dispatch" style="display: none;">
+            <div class="dispatch-header">
+              <span class="dispatch-dot active"></span>
+              <h4>⚡ VRROBO AUTOMATED DISPATCHER SYSTEM ACTIVATED</h4>
+              <button type="button" class="btn-close-dispatch" id="btn-close-dispatch">&times;</button>
+            </div>
+            <div class="dispatch-terminal">
+              <div class="terminal-line"><span class="t-cyan">[SYSTEM]</span> Initializing SMTP & WhatsApp Gateways...</div>
+              <div class="terminal-line"><span class="t-green">[SUCCESS]</span> Secure connection established with API endpoints.</div>
+              <div class="terminal-line"><span class="t-yellow">[DISPATCHING]</span> Sending WhatsApp Kickoff Notification to PM & Client...</div>
+              <div class="terminal-line-content" id="dispatch-wa-content"></div>
+              <div class="terminal-line"><span class="t-yellow">[DISPATCHING]</span> Transmitting SMTP Email to vrrobo2025@gmail.com & client...</div>
+              <div class="terminal-line-content" id="dispatch-email-content"></div>
+              <div class="terminal-line"><span class="t-green">[SUCCESS]</span> Dispatch process complete. Project successfully Kicked Off!</div>
             </div>
           </div>
 
@@ -381,6 +405,21 @@
               <div class="agreement-row"><strong>Platform:</strong> <span id="agree-platform">-</span></div>
               <div class="agreement-row"><strong>Estimasi Biaya:</strong> <span id="agree-cost">-</span></div>
               <div class="agreement-row"><strong>Waktu Pengerjaan:</strong> <span id="agree-time">-</span></div>
+              <div class="agreement-row"><strong>Tujuan Proyek (Project Goal):</strong> <span data-i18n="agree-goal-desc">Membangun sistem aplikasi kustom berkualitas tinggi dengan performa optimal untuk digitalisasi operasional bisnis, meningkatkan kepuasan pengguna akhir, dan memastikan skalabilitas jangka panjang.</span></div>
+              
+              <div class="agreement-grid-details">
+                <div class="agree-detail-card">
+                  <h5>📋 <span data-i18n="agree-sec-scope-title">Ruang Lingkup & Pengecualian</span></h5>
+                  <p><strong><span data-i18n="agree-sec-scope-label">Lingkup Kerja:</span></strong> <span data-i18n="agree-sec-scope-desc">Desain UI/UX eksklusif, pengembangan frontend & backend, integrasi database terlindungi, implementasi fitur yang dipilih, serta uji stabilitas sistem.</span></p>
+                  <p><strong><span data-i18n="agree-sec-exc-label">Pengecualian (Out of Scope):</span></strong> <span data-i18n="agree-sec-exc-desc">Penyediaan konten/data mentah, biaya lisensi API berbayar pihak ketiga, biaya sewa server/hosting bulanan, dan pendaftaran akun store developer pribadi.</span></p>
+                </div>
+                <div class="agree-detail-card">
+                  <h5>💳 <span data-i18n="agree-sec-terms-title">Syarat Pembayaran & Garansi</span></h5>
+                  <p><strong><span data-i18n="agree-sec-terms-label">Ketentuan Pembayaran:</span></strong> <span data-i18n="agree-sec-terms-desc">Pembayaran uang muka (DP) minimal 20% dari total anggaran untuk memulai pengerjaan (Kickoff). Pelunasan sisa biaya setelah proses QA selesai sebelum sistem dirilis secara resmi.</span></p>
+                  <p><strong><span data-i18n="agree-sec-warranty-label">Garansi Sistem:</span></strong> <span data-i18n="agree-sec-warranty-desc">Dukungan perbaikan bug/error gratis selama 30 hari kalender terhitung sejak serah terima proyek secara resmi.</span></p>
+                </div>
+              </div>
+
               <div class="agreement-row"><strong>Target Kinerja Utama (KPI Proyek):</strong></div>
               <ul class="agreement-kpis">
                 <li data-i18n="kpi-speed">Page Load Time kurang dari 2.5 Detik (Optimasi Aset & Caching).</li>
@@ -417,6 +456,73 @@
               </div>
             </div>
           </div>
+
+          <!-- Project Kickoff & Payment Module (Step 3) [BARU] -->
+          <div id="tracker-kickoff-box" class="tracker-agreement-box" style="display: none;">
+            <h4 class="agreement-box-title" data-i18n="kickoff-box-title">Pembayaran Uang Muka & Kickoff Proyek</h4>
+            <p class="agreement-box-info" data-i18n="kickoff-box-info">Kontrak proyek telah disetujui. Silakan lakukan pembayaran Down Payment (DP) minimal 20% dari estimasi total untuk melakukan kickoff dan memulai proses pengembangan.</p>
+            
+            <div class="kickoff-payment-instructions">
+              <div class="payment-method-card">
+                <div class="pay-icon">🏦</div>
+                <div class="pay-details">
+                  <h5>Bank BCA</h5>
+                  <p>No. Rekening: <strong>5670095021</strong></p>
+                  <p>Atas Nama: <strong>Verdino Heronarto Ontario</strong></p>
+                </div>
+              </div>
+              <div class="payment-method-card">
+                <div class="pay-icon">💳</div>
+                <div class="pay-details">
+                  <h5>PayPal</h5>
+                  <p>Email Penerima: <strong>verd1988@gmail.com</strong></p>
+                  <p>Atas Nama: <strong>Verdino Heronarto Ontario</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-warning-note">
+              <span class="warning-icon">⚠</span>
+              <p><strong>PENTING:</strong> Mohon sertakan Kode Tiket Anda (<strong class="kickoff-ticket-highlight" id="kickoff-ticket-note-id">VRB-2026-XXXX</strong>) di kolom catatan/keterangan transfer agar sistem dapat mengidentifikasi pembayaran Anda secara otomatis.</p>
+            </div>
+
+            <form id="kickoff-payment-form" class="kickoff-payment-form">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="pay-method-select" class="form-label">Metode Pembayaran</label>
+                  <select id="pay-method-select" class="form-select" required>
+                    <option value="" disabled selected>Pilih Metode...</option>
+                    <option value="BCA">Transfer Bank BCA</option>
+                    <option value="PayPal">PayPal Transfer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="pay-sender-name" class="form-label">Nama Pengirim / Email PayPal</label>
+                  <input type="text" id="pay-sender-name" class="form-input" placeholder="Contoh: Budi Santoso / budi@email.com" required>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="pay-amount" class="form-label">Nominal DP yang Ditransfer (Rupiah)</label>
+                  <input type="number" id="pay-amount" class="form-input" placeholder="Masukkan jumlah pembayaran..." required>
+                  <small id="pay-min-dp-hint" class="form-hint-info">Minimal DP 20%: -</small>
+                </div>
+                <div class="form-group">
+                  <label for="pay-ref-code" class="form-label">Nomor Referensi / Kode Transaksi</label>
+                  <input type="text" id="pay-ref-code" class="form-input" placeholder="Masukkan kode transaksi..." required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pay-proof-file" class="form-label">Bukti Transfer (Opsional)</label>
+                <input type="file" id="pay-proof-file" class="form-input-file">
+              </div>
+
+              <button type="submit" class="form-submit-btn" id="btn-submit-payment">Konfirmasi Pembayaran & Mulai Kickoff</button>
+            </form>
+          </div>
+
 
           <!-- Project History Logs Timeline -->
           <div class="project-history-timeline-box">
@@ -539,9 +645,10 @@
                   <div class="status-buttons-grid">
                     <button type="button" class="btn-status-set" data-status="1" data-i18n="btn-set-init">Inisiasi</button>
                     <button type="button" class="btn-status-set" data-status="2" data-i18n="btn-set-agree">Persetujuan</button>
-                    <button type="button" class="btn-status-set" data-status="3" data-i18n="btn-set-dev">Develop</button>
-                    <button type="button" class="btn-status-set" data-status="4" data-i18n="btn-set-qa">QA Test</button>
-                    <button type="button" class="btn-status-set" data-status="5" data-i18n="btn-set-launch">Rilis</button>
+                    <button type="button" class="btn-status-set" data-status="3" data-i18n="btn-set-kickoff">Kickoff</button>
+                    <button type="button" class="btn-status-set" data-status="4" data-i18n="btn-set-dev">Develop</button>
+                    <button type="button" class="btn-status-set" data-status="5" data-i18n="btn-set-qa">QA Test</button>
+                    <button type="button" class="btn-status-set" data-status="6" data-i18n="btn-set-launch">Rilis</button>
                   </div>
                 </div>
 

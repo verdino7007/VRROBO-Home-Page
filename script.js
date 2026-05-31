@@ -65,6 +65,7 @@ const translations = {
     "tracker-btn-search": "Lacak Proyek",
     "status-review": "Menunggu Review",
     "status-agreement": "Tahap Persetujuan KPI",
+    "status-kickoff": "Kickoff & Pembayaran",
     "status-dev": "Tahap Pengembangan",
     "status-qa": "Tahap Pengujian QA",
     "status-launch": "Sudah Rilis / Selesai",
@@ -79,12 +80,14 @@ const translations = {
     "step1-desc": "Pemesanan & Deskripsi Proyek Diterima.",
     "step2-title": "Persetujuan & KPI",
     "step2-desc": "Kesepakatan KPI & Draft Kontrak VRROBO.",
-    "step3-title": "Pengembangan",
-    "step3-desc": "Proses Pembuatan Kode & Desain UI/UX.",
-    "step4-title": "Pengujian (QA)",
-    "step4-desc": "Pengujian Sistem, Bugs Fix & Keamanan.",
-    "step5-title": "Rilis & Delivery",
-    "step5-desc": "Serah Terima & Rilis ke Produksi/Store.",
+    "step3-title": "Kickoff & Pembayaran",
+    "step3-desc": "Pembayaran DP & Aktivasi Proyek.",
+    "step4-title": "Pengembangan",
+    "step4-desc": "Proses Pembuatan Kode & Desain UI/UX.",
+    "step5-title": "Pengujian (QA)",
+    "step5-desc": "Pengujian Sistem & Keamanan.",
+    "step6-title": "Rilis & Delivery",
+    "step6-desc": "Serah Terima & Rilis ke Produksi/Store.",
     
     // Project Agreement Drawer
     "agreement-title": "Draf Persetujuan Proyek & KPI VRROBO2025",
@@ -104,7 +107,7 @@ const translations = {
     "notice-dropped-title": "PROYEK DIBATALKAN (DROPPED)",
     "notice-dropped-desc": "Proyek ini dibatalkan oleh PM VRROBO dengan alasan:",
     "history-box-title": "Riwayat Aktivitas & Log Proyek",
-
+ 
     // Admin Panel Translations
     "admin-login-title": "Akses Khusus Project Manager VRROBO",
     "admin-login-subtitle": "Masukkan sandi khusus PM untuk mengelola data proyek, harga, dan progress klien.",
@@ -121,6 +124,7 @@ const translations = {
     "pm-ctrl-status": "Ubah Status Proyek (Step Status)",
     "btn-set-init": "Inisiasi",
     "btn-set-agree": "Persetujuan",
+    "btn-set-kickoff": "Kickoff",
     "btn-set-dev": "Develop",
     "btn-set-qa": "QA Test",
     "btn-set-launch": "Rilis",
@@ -260,6 +264,7 @@ const translations = {
     "tracker-btn-search": "Track Project",
     "status-review": "Review Requirements",
     "status-agreement": "KPI Agreement Stage",
+    "status-kickoff": "Kickoff & Payment",
     "status-dev": "Development Stage",
     "status-qa": "QA Testing Stage",
     "status-launch": "Released / Completed",
@@ -274,12 +279,14 @@ const translations = {
     "step1-desc": "Order & Project Description Received.",
     "step2-title": "Agreement & KPI",
     "step2-desc": "KPI Agreement & VRROBO Contract Draft.",
-    "step3-title": "Development",
-    "step3-desc": "UI/UX Design & Coding Process.",
-    "step4-title": "Testing (QA)",
-    "step4-desc": "System Tests, Bug Fixes & Security Check.",
-    "step5-title": "Release & Launch",
-    "step5-desc": "Handover & Production/Store Release.",
+    "step3-title": "Kickoff & Payment",
+    "step3-desc": "DP Payment & Project Activation.",
+    "step4-title": "Development",
+    "step4-desc": "UI/UX Design & Coding Process.",
+    "step5-title": "Testing (QA)",
+    "step5-desc": "System Tests, Bug Fixes & Security Check.",
+    "step6-title": "Release & Launch",
+    "step6-desc": "Handover & Production/Store Release.",
     
     // Project Agreement Drawer
     "agreement-title": "Project Agreement Draft & KPI VRROBO2025",
@@ -299,7 +306,7 @@ const translations = {
     "notice-dropped-title": "PROJECT CANCELLED (DROPPED)",
     "notice-dropped-desc": "This project was cancelled by VRROBO PM with reason:",
     "history-box-title": "Project Activity History & Logs",
-
+ 
     // Admin Panel Translations
     "admin-login-title": "VRROBO Project Manager Access Only",
     "admin-login-subtitle": "Enter the PM passcode to manage project data, pricing, and client progress.",
@@ -316,6 +323,7 @@ const translations = {
     "pm-ctrl-status": "Change Project Status (Status Steps)",
     "btn-set-init": "Initiate",
     "btn-set-agree": "Agreement",
+    "btn-set-kickoff": "Kickoff",
     "btn-set-dev": "Develop",
     "btn-set-qa": "QA Test",
     "btn-set-launch": "Release",
@@ -588,14 +596,15 @@ document.addEventListener('DOMContentLoaded', () => {
         constraints: ["security"],
         additionalMessage: "Kami butuh aplikasi web admin panel dan aplikasi android untuk sales lapangan kami.",
         date: "30/05/2026",
-        status: 3, // Tahap Pengembangan
+        status: 4, // Tahap Pengembangan (Langkah 4)
         approvedByClient: true,
         discount: 10, // 10% discount by PM
         pricing: calculateEstimate("both", "professional", "normal", ["auth", "payment", "admin"], ["security"]),
         historyLog: [
           { date: "30/05/2026, 10:15", action: "Ticket Created by Client", details: "Initial scoping request submitted." },
           { date: "30/05/2026, 14:30", action: "Discount Applied by PM", details: "Project Manager applied 10% discount." },
-          { date: "30/05/2026, 16:45", action: "Project Approved by Client", details: "Agreement signed, moved to Development." }
+          { date: "30/05/2026, 16:45", action: "Project Approved by Client", details: "Agreement signed, moved to Kickoff & Payment." },
+          { date: "30/05/2026, 17:00", action: "Kickoff Payment Verified by PM", details: "Down payment verified via BCA. Project officially kicked off." }
         ]
       };
 
@@ -809,9 +818,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusTextMap = {
       1: { id: "Menunggu Review", en: "Awaiting Review" },
       2: { id: "Persetujuan Kontrak", en: "Contract Approval" },
-      3: { id: "Tahap Pengembangan", en: "In Development" },
-      4: { id: "Tahap Pengujian QA", en: "QA Testing" },
-      5: { id: "Selesai & Rilis", en: "Completed & Launched" },
+      3: { id: "Kickoff & Pembayaran", en: "Kickoff & Payment" },
+      4: { id: "Tahap Pengembangan", en: "In Development" },
+      5: { id: "Tahap Pengujian QA", en: "QA Testing" },
+      6: { id: "Selesai & Rilis", en: "Completed & Launched" },
       "dropped": { id: "Dibatalkan (Dropped)", en: "Cancelled (Dropped)" }
     };
     
@@ -854,10 +864,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayCost = document.getElementById('display-cost');
     const originalCostStrike = document.getElementById('display-original-cost');
 
+    let finalMinPrice = originalMin;
     if (ticket.discount > 0) {
       const discMult = (100 - ticket.discount) / 100;
       const discountedMin = Math.round(originalMin * discMult);
       const discountedMax = Math.round(originalMax * discMult);
+      finalMinPrice = discountedMin;
       
       originalCostStrike.style.display = 'inline';
       originalCostStrike.textContent = originalCostText;
@@ -880,12 +892,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ticket.status === 'dropped') {
       progressFill.style.width = '0%';
     } else {
-      const percentages = { 1: 0, 2: 25, 3: 50, 4: 75, 5: 100 };
+      const percentages = { 1: 0, 2: 20, 3: 40, 4: 60, 5: 80, 6: 100 };
       progressFill.style.width = `${percentages[ticket.status]}%`;
     }
 
     // Step items highlights
-    for (let step = 1; step <= 5; step++) {
+    for (let step = 1; step <= 6; step++) {
       const stepEl = document.getElementById(`step-${step}`);
       if (stepEl) {
         stepEl.classList.remove('active', 'completed');
@@ -899,7 +911,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Agreement Drawer
+    // Agreement Drawer (Shown on Step 2 as pending review, or always as contract reference once approved)
     const agreeBox = document.getElementById('tracker-agreement-box');
     if (ticket.status === 'dropped') {
       agreeBox.style.display = 'none';
@@ -937,9 +949,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         newApproveBtn.addEventListener('click', () => {
           ticket.approvedByClient = true;
-          ticket.status = 3; // Advance to development
+          ticket.status = 3; // Advance to kickoff
           
-          addActivityLog(ticket, "Project Approved by Client", "Agreement signed. Standard KPIs verified. Moved to Development Stage.");
+          addActivityLog(ticket, "Project Approved by Client", "Agreement signed. Standard KPIs & IT terms verified. Ready for Kickoff & Payment.");
           
           const updatedDb = getTicketDB();
           const tIndex = updatedDb.findIndex(t => t.id === ticket.id);
@@ -957,7 +969,94 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }
+    }
 
+    // -------------------------------------------------------------
+    // Kickoff Payment Box (Langkah 3) & Confirmation Form
+    // -------------------------------------------------------------
+    const kickoffBox = document.getElementById('tracker-kickoff-box');
+    const kickoffForm = document.getElementById('kickoff-payment-form');
+    
+    if (kickoffBox) {
+      if (ticket.status === 3 && ticket.status !== 'dropped') {
+        kickoffBox.style.display = 'block';
+        
+        // Populate Ticket notes ID
+        const kickoffTicketNoteId = document.getElementById('kickoff-ticket-note-id');
+        if (kickoffTicketNoteId) kickoffTicketNoteId.textContent = ticket.id;
+        
+        // Calculate 20% minimum DP based on the discounted total pricing
+        const minDpAmount = Math.round(finalMinPrice * 0.20);
+        
+        const minDpHint = document.getElementById('pay-min-dp-hint');
+        if (minDpHint) {
+          minDpHint.textContent = currentLang === 'en' 
+            ? `Minimum DP (20%): ${formatIDR(minDpAmount)}` 
+            : `Minimal DP 20%: ${formatIDR(minDpAmount)}`;
+        }
+        
+        // Event handler for submission
+        if (kickoffForm) {
+          const newKickoffForm = kickoffForm.cloneNode(true);
+          kickoffForm.parentNode.replaceChild(newKickoffForm, kickoffForm);
+          
+          newKickoffForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const payMethod = document.getElementById('pay-method-select').value;
+            const paySender = document.getElementById('pay-sender-name').value.trim();
+            const payAmount = parseInt(document.getElementById('pay-amount').value);
+            const payRef = document.getElementById('pay-ref-code').value.trim();
+            
+            if (payAmount < minDpAmount) {
+              const warningMsg = currentLang === 'en'
+                ? `Payment is less than the minimum 20% DP (${formatIDR(minDpAmount)}). Please transfer at least the minimum DP.`
+                : `Pembayaran kurang dari batas minimal DP 20% (${formatIDR(minDpAmount)}). Mohon transfer minimal nominal DP.`;
+              alert(warningMsg);
+              return;
+            }
+            
+            // Success - Process Kickoff
+            ticket.status = 4; // Advance to Step 4: Pengembangan
+            ticket.paymentInfo = {
+              method: payMethod,
+              sender: paySender,
+              amount: payAmount,
+              ref: payRef,
+              date: new Date().toLocaleString('id-ID', { hour12: false }).substring(0, 17)
+            };
+            
+            addActivityLog(
+              ticket, 
+              "Kickoff Payment Confirmed", 
+              `DP payment of ${formatIDR(payAmount)} verified via ${payMethod} (Ref: ${payRef}). Project officially kicked off.`
+            );
+            
+            // Save updates
+            const updatedDb = getTicketDB();
+            const tIndex = updatedDb.findIndex(t => t.id === ticket.id);
+            if (tIndex !== -1) {
+              updatedDb[tIndex] = ticket;
+              saveTicketDB(updatedDb);
+            }
+            
+            // Trigger Notification Dispatch Visual Terminal
+            triggerNotificationDispatch(ticket, payMethod, paySender, payAmount);
+            
+            // Rerender progress tracker
+            renderTicketProgress(ticket.id);
+            
+            // Re-populate admin PM table if open
+            if (document.getElementById('admin-board-view').style.display !== 'none') {
+              populateAdminProjectTable();
+              renderAdminTicketDetail(ticket.id);
+            }
+          });
+        }
+      } else {
+        kickoffBox.style.display = 'none';
+      }
+    }
       // Sharing builders
       const trackingLink = `${window.location.origin}${window.location.pathname}?ticket=${ticket.id}`;
       const messages = {
@@ -1126,9 +1225,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusTextMap = {
       1: "Step 1: Initiate Scoping",
       2: "Step 2: Persetujuan KPI",
-      3: "Step 3: Development",
-      4: "Step 4: QA Testing",
-      5: "Step 5: Released/Launch",
+      3: "Step 3: Kickoff & Pembayaran",
+      4: "Step 4: Development",
+      5: "Step 5: QA Testing",
+      6: "Step 6: Released/Launch",
       "dropped": "PROJECT DROPPED"
     };
     
@@ -1228,9 +1328,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const statusNames = {
             1: "Inisiasi Proyek (Initiate)",
             2: "Persetujuan Kontrak (Agreement)",
-            3: "Tahap Pengembangan (Development)",
-            4: "Pengujian QA (QA Testing)",
-            5: "Serah Terima & Rilis (Launch)"
+            3: "Kickoff & Pembayaran (Kickoff)",
+            4: "Tahap Pengembangan (Development)",
+            5: "Pengujian QA (QA Testing)",
+            6: "Serah Terima & Rilis (Launch)"
           };
           
           ticket.status = targetStatus;
@@ -1357,6 +1458,63 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         adminLogsList.appendChild(logItem);
       });
+    }
+  };
+
+  const triggerNotificationDispatch = (ticket, payMethod, paySender, payAmount) => {
+    const dispatchBox = document.getElementById('tracker-notification-dispatch');
+    const waContent = document.getElementById('dispatch-wa-content');
+    const emailContent = document.getElementById('dispatch-email-content');
+    
+    if (dispatchBox && waContent && emailContent) {
+      dispatchBox.style.display = 'block';
+      
+      const pMap = {
+        web: { id: "Web-Based Application", en: "Web-Based Application" },
+        android: { id: "Android Mobile Application", en: "Android Mobile Application" },
+        both: { id: "Keduanya (Web & Android)", en: "Both (Web & Android)" },
+        consultation: { id: "Konsultasi Sistem / Lainnya", en: "System Consultation / Other" }
+      };
+      
+      const platformTitle = pMap[ticket.platform] ? pMap[ticket.platform][currentLang] : ticket.platform;
+      
+      waContent.textContent = 
+        `To: PM VRROBO (+62-811-VRROBO) & Klien (${ticket.clientName})\n` +
+        `--------------------------------------------------\n` +
+        `🔔 [VRROBO KICKOFF ALERT]\n` +
+        `Proyek: "${platformTitle}"\n` +
+        `No Tiket: ${ticket.id}\n` +
+        `Pemilik: ${ticket.clientName}\n` +
+        `Email: ${ticket.clientEmail}\n` +
+        `Status: KICK OFF! Proyek resmi berjalan setelah verifikasi DP ${formatIDR(payAmount)} via ${payMethod}.`;
+        
+      emailContent.textContent =
+        `To: vrrobo2025@gmail.com, ${ticket.clientEmail}\n` +
+        `--------------------------------------------------\n` +
+        `Subject: [VRROBO] KICKOFF PROYEK - ${ticket.id} - ${ticket.clientName} telah KICK OFF!\n\n` +
+        `Halo,\n\n` +
+        `Sistem mengonfirmasi bahwa proyek Anda telah resmi dimulai (Kick Off):\n` +
+        `- Judul/Platform: ${platformTitle}\n` +
+        `- Nomor Tiket: ${ticket.id}\n` +
+        `- Pemilik Proyek: ${ticket.clientName}\n` +
+        `- Email Kontak: ${ticket.clientEmail}\n` +
+        `- Pembayaran DP: ${formatIDR(payAmount)} via ${payMethod} (a.n. ${paySender})\n\n` +
+        `Status saat ini: Proyek beralih ke Tahap Pengembangan (Langkah 4).\n\n` +
+        `Salam hangat,\n` +
+        `Sistem Otomatisasi VRROBO`;
+        
+      // Scroll to dispatcher console
+      setTimeout(() => {
+        dispatchBox.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+      
+      // Close dispatcher handler
+      const closeBtn = document.getElementById('btn-close-dispatch');
+      if (closeBtn) {
+        closeBtn.onclick = () => {
+          dispatchBox.style.display = 'none';
+        };
+      }
     }
   };
 
